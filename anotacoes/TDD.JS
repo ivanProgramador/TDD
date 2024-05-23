@@ -50,10 +50,49 @@ Quando não usar o TDD
     Essa atitude em um projeto que já existe poderia causar um atraso na produção.
 
     Pratricando TDD
+  
+    Quando o Jest é executado ele vai buscar por um arquivo que tem a apalavra test no nome aqui eu coloquei calculadora.test.js
+    esse arquivo normalemente é chamado de switch de testes.
 
-    ATENÇÃO !
+    1 - eu importo o arquivo que tem as funções que eu vou testar
+    2 - eu faço a função test() que recebe 2 parametros o primeiro é um strinbg onde nos dizemos qoue esta sendo esperado 
+        desse teste eo segundo e a função que vai ser executada e testada.
 
-    "primeiro escrevemos o teste , depois escrevemos o código" 
+    3 - a função expect recebe o resultado do teste e compara para ver se é igual a 10 se não fo o teste falhou
+    
+    test("Deve retornar o valor 10 ao somar 5 + 5",()=>{
+
+    let resultado = app.soma(5,5);
+    expect(resultado).toEqual(10);
+    });
+
+
+    Agrupando testes, no exemplo abaixo eu coloquei as duas funções no grupo de funções basicas 
+    separar as funções em grupos ajuda quando existem muitas funções para testar no display do jest
+    vai aparecer a descrição delas e o resultado. Assim é possivel saber que tipo de função foi testada 
+    e a qual grupo a função pertence. 
+
+    describe("funções basicas",()=>{
+
+    test("Deve retornar o valor 10 ao somar 5 + 5",()=>{
+
+        let resultado = app.soma(5,5);
+        expect(resultado).toEqual(10);
+    });
+
+      test("Deve retornar 10 ao multiplicar 2 por 5",()=>{
+
+          let resultado = app.mult(2,5);
+          expect(resultado).toEqual(10);
+          
+      })
+
+    })
+
+
+
+    
+    
 
   
 
