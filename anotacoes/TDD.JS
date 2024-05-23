@@ -55,6 +55,8 @@ Quando não usar o TDD
 
     "primeiro escrevemos o teste , depois escrevemos o código" 
 
+  
+
 
    
 
